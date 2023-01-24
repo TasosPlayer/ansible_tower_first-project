@@ -1,6 +1,10 @@
 - name: Install Apache
-  hosts: Webservers
+  hosts: 10.0.2.15
 
   tasks:
     - name: Install Apache
       become: true
+      ansible.builtin.apt:
+        name: apache
+        enabled: yes
+        state: started
