@@ -1,0 +1,6 @@
+- name: Install Apache
+  hosts: Webservers
+
+  tasks:
+    - name: Install Apache
+      become: true
